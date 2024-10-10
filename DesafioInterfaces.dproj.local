@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2024/10/09 14:31:41.764,=C:\Users\DELL\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/10/09 14:48:28.038,C:\Users\DELL\Desktop\Desafio WK\Interfaces\UPrincipal.pas=C:\Users\DELL\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/10/09 14:48:28.038,C:\Users\DELL\Desktop\Desafio WK\Interfaces\UPrincipal.dfm=C:\Users\DELL\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2024/10/09 14:48:43.924,C:\Users\DELL\Desktop\Desafio WK\Interfaces\DesafioInterfaces.dproj=C:\Users\DELL\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2024/10/09 14:54:29.253,=C:\Users\DELL\Desktop\Desafio WK\Interfaces\Unit1.pas</Transaction>
+    <Transaction>2024/10/09 14:54:41.942,C:\Users\DELL\Desktop\Desafio WK\Interfaces\UProduto.pas=C:\Users\DELL\Desktop\Desafio WK\Interfaces\Unit1.pas</Transaction>
+    <Transaction>2024/10/09 14:54:47.649,=C:\Users\DELL\Desktop\Desafio WK\Interfaces\Unit1.pas</Transaction>
+    <Transaction>2024/10/09 14:54:55.025,C:\Users\DELL\Desktop\Desafio WK\Interfaces\UPedido.pas=C:\Users\DELL\Desktop\Desafio WK\Interfaces\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

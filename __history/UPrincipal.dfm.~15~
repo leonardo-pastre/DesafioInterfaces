@@ -1,0 +1,154 @@
+object Principal: TPrincipal
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Desafio WK - Interfaces'
+  ClientHeight = 276
+  ClientWidth = 538
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  Position = poScreenCenter
+  OnCreate = FormCreate
+  TextHeight = 15
+  object EdtNome: TLabeledEdit
+    Left = 10
+    Top = 32
+    Width = 178
+    Height = 23
+    EditLabel.Width = 96
+    EditLabel.Height = 15
+    EditLabel.Caption = 'Nome do produto'
+    TabOrder = 0
+    Text = ''
+  end
+  object EdtPreco: TLabeledEdit
+    Left = 194
+    Top = 32
+    Width = 79
+    Height = 23
+    EditLabel.Width = 30
+    EditLabel.Height = 15
+    EditLabel.Caption = 'Pre'#231'o'
+    TabOrder = 1
+    Text = ''
+  end
+  object BtnInserir: TBitBtn
+    Left = 367
+    Top = 32
+    Width = 75
+    Height = 24
+    Caption = 'Inserir'
+    TabOrder = 2
+    OnClick = BtnInserirClick
+  end
+  object EdtTotal: TLabeledEdit
+    Left = 402
+    Top = 245
+    Width = 121
+    Height = 23
+    EditLabel.Width = 25
+    EditLabel.Height = 15
+    EditLabel.Caption = 'Total'
+    TabOrder = 3
+    Text = ''
+  end
+  object BtnRemover: TBitBtn
+    Left = 448
+    Top = 32
+    Width = 75
+    Height = 24
+    Caption = 'Remover'
+    TabOrder = 4
+    OnClick = BtnRemoverClick
+  end
+  object DbgProdutos: TDBGrid
+    Left = 10
+    Top = 62
+    Width = 513
+    Height = 59
+    DataSource = DtsProdutos
+    TabOrder = 5
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -12
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'NOME'
+        Title.Caption = 'Nome'
+        Width = 200
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'PRECO'
+        Title.Caption = 'Pre'#231'o'
+        Width = 70
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'DESCONTO'
+        Title.Caption = 'Desconto'
+        Width = 70
+        Visible = True
+      end>
+  end
+  object EdtDesconto: TLabeledEdit
+    Left = 279
+    Top = 32
+    Width = 79
+    Height = 23
+    EditLabel.Width = 50
+    EditLabel.Height = 15
+    EditLabel.Caption = 'Desconto'
+    TabOrder = 6
+    Text = ''
+  end
+  object SgrProdutos: TStringGrid
+    Left = 10
+    Top = 136
+    Width = 513
+    Height = 89
+    ColCount = 3
+    FixedCols = 0
+    RowCount = 1
+    FixedRows = 0
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goRowSelect, goFixedRowDefAlign]
+    ScrollBars = ssVertical
+    TabOrder = 7
+  end
+  object DtsProdutos: TDataSource
+    DataSet = CdsProdutos
+    Left = 194
+    Top = 136
+  end
+  object CdsProdutos: TClientDataSet
+    PersistDataPacket.Data = {
+      520000009619E0BD0100000018000000030000000000030000005200044E4F4D
+      45010049000000010005574944544802000200320005505245434F0800040000
+      00000008444553434F4E544F08000400000000000000}
+    Active = True
+    Aggregates = <>
+    Params = <>
+    Left = 106
+    Top = 136
+    object CdsProdutosNOME: TStringField
+      FieldName = 'NOME'
+      Size = 50
+    end
+    object CdsProdutosPRECO: TFloatField
+      FieldName = 'PRECO'
+    end
+    object CdsProdutosDESCONTO: TFloatField
+      FieldName = 'DESCONTO'
+    end
+  end
+end

@@ -1,0 +1,61 @@
+unit UProduto;
+
+interface
+
+uses
+  System.SysUtils;
+
+type
+  NomeInvalidoException = class(Exception);
+  ValorInvalidoException = class(Exception);
+
+  IProduto = interface
+    ['{254E41A0-B5C6-456F-8FBC-624213DF694A}']
+    function GetNome: string;
+    function GetPreco: Double;
+    procedure AplicarDesconto(APercentual: Double);
+  end;
+
+  TProduto = class(TInterfacedObject, IProduto)
+  private
+    FNome: string;
+    FPreco: Double;
+  public
+    constructor Create(const ANome: string; const APreco: Double);
+    function GetNome: string;
+    function GetPreco: Double;
+    procedure AplicarDesconto(APercentual: Double);
+  end;
+
+implementation
+
+{ TProduto }
+
+constructor TProduto.Create(const ANome: string; const APreco: Double);
+begin
+  if ANome.IsEmpty then
+    raise NomeInvalidoException.Create('Nome do produto não informado');
+
+  if APreco < 0 then
+    raise ValorInvalidoException.Create('Valor do produto não pode ser negativo');
+
+  FNome := ANome;
+  FPreco := APreco;
+end;
+
+procedure TProduto.AplicarDesconto(APercentual: Double);
+begin
+
+end;
+
+function TProduto.GetNome: string;
+begin
+  Result := FNome;
+end;
+
+function TProduto.GetPreco: Double;
+begin
+  Result := FPreco;
+end;
+
+end.
